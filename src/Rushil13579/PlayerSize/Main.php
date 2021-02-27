@@ -107,7 +107,7 @@ class Main extends PluginBase {
 # ==================== PLAYERSIZE FORM ====================
 
   public function playersizeForm($player){
-    $form = new CustomForm(function (Player $player, array $data){
+    $form = new CustomForm(function (Player $player, array $data = null){
       if($data === null){
         return '';
       }
