@@ -1,0 +1,24 @@
+# Messages file for PlayerSize by Rushil13579
+
+# Use '&' for color
+
+# Message sent when command sender is not a player
+not-player-msg: "&cPlease use this command in-game"
+
+# Message sent when command sender does not have permission to run the command
+no-permission-msg: "&cYou do not have permission to use this command"
+
+# Usage message for the PlayerSize command
+playersize-usage-msg: "&cUsage: /playersize help"
+
+# Message sent when the PlayerSize help command has been run
+playersize-help-msg: "&3[&bPlayerSize&3] \n&c/playersize help: &7Get help regarding PlayerSize plugin\n&c/playersize show: &7Set PlayerSize to show\n&c/playersize small: &7Set PlayerSize to small\n&c/playersize hide: &7Set PlayerSize to hide"
+
+# Message sent when player size has been set to normal
+playersize-normal-msg: "&3[&bPlayerSize&3] &7PlayerSize has now been set to &eNORMAL"
+
+# Message sent when player size has been set to small
+playersize-small-msg: "&3[&bPlayerSize&3] &7PlayerSize has now been set to &eSMALL"
+
+# Message sent when player size has been set to hide
+playersize-hide-msg: "&3[&bPlayerSize&3] &7PlayerSize has now been set to &eHIDE"
