@@ -16,7 +16,7 @@ use pocketmine\network\mcpe\protocol\SetActorDataPacket;
 
 use pocketmine\utils\{Config, TextFormat as C};
 
-use jojoe77777\FormAPI\SimpleForm;
+use jojoe77777\FormAPI\CustomForm;
 
 class Main extends PluginBase {
 
@@ -63,6 +63,11 @@ class Main extends PluginBase {
         }
       }
 
+      if(in_array($sender->getLevel()->getName(), $this->cfg->get('blacklisted-worlds'))){
+        $sender->sendMessage(C::colorize($this->msg->get('blacklisted-world-msg')));
+        return false;
+      }
+
       if(!isset($args[0])){
         if($this->cfg->get('playersize-formapi-support') == true){
           $this->playersizeForm($sender);
@@ -102,28 +107,22 @@ class Main extends PluginBase {
 # ==================== PLAYERSIZE FORM ====================
 
   public function playersizeForm($player){
-    $form = new SimpleForm(function (Player $player, $data = null){
+    $form = new CustomForm(function (Player $player, array $data){
       if($data === null){
         return '';
       }
-      switch($data){
-        case 0:
-          $this->normal($player);
-        break;
-
-        case 1:
-          $this->small($player);
-        break;
-
-        case 2:
-          $this->hide($player);
-        break;
+      if($data[0] == (int) '0'){
+        $this->normal($player);
+      }
+      if($data[0] == (int) '1'){
+        $this->small($player);
+      }
+      if($data[0] == (int) '2'){
+        $this->hide($player);
       }
     });
     $form->setTitle(C::colorize($this->cfg->get('playersize-form-title')));
-    $form->addButton(C::colorize($this->cfg->get('playersize-form-normal-button')));
-    $form->addButton(C::colorize($this->cfg->get('playersize-form-small-button')));
-    $form->addButton(C::colorize($this->cfg->get('playersize-form-hide-button')));
+    $form->addStepSlider(C::colorize('&3PlayerSize'), [C::colorize('&aNormal'), C::colorize('&dSmall'), C::colorize('&cHide')]);
     $form->sendToPlayer($player);
     return $form;
   }

@@ -8,6 +8,9 @@ not-player-msg: "&cPlease use this command in-game"
 # Message sent when command sender does not have permission to run the command
 no-permission-msg: "&cYou do not have permission to use this command"
 
+# Message sent when the command is run in a blacklisted world
+blacklisted-world-msg: "&cThis command is banned in this world"
+
 # Usage message for the PlayerSize command
 playersize-usage-msg: "&cUsage: /playersize help"
 

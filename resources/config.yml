@@ -11,16 +11,10 @@ playersize-permission-enabled: true
 # Permission for the playersize commands [Only matters if playersize-permission-enabled is set to true]
 playersize-permission: "playersize.use"
 
-# EVERYTHING UNDER THIS ONLY MATTERS IF playersize-formapi-support is true
-
-# Title of the playersize form
+# Title of the playersize form [Only matters if playersize-formapi-support is true]
 playersize-form-title: "&3[&bPlayerSize&3]"
 
-# Name of the playersize form normal button
-playersize-form-normal-button: "&aShow"
-
-# Name of the playersize form small button
-playersize-form-small-button: "&dSmall"
-
-# Name of the playersize form hide button
-playersize-form-hide-button: "&7Hide"
+# Worlds in which PlayerSize commands wont work
+blacklisted-worlds:
+  - world1
+  - world2
