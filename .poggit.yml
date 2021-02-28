@@ -6,6 +6,6 @@ projects:
   PlayerSize:
     path: ""
     libs:
-    - src: jojoe/FormAPI/libFormAPI
+    - src: jojoe77777/FormAPI/libFormAPI
       version: ^1.3
 ...
