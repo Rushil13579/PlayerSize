@@ -13,5 +13,10 @@ Commands | Aliases | Description
 /playersize small | [/ps small] | Set the size of all players to small
 /playersize hide | [/ps hide] | Set the size of all players to hidden
 
+## Example
+
+### PlayerSize Normal
+![PlayerSize Normal](https://github.com/)
+
 ## Credits
 - [Rushil13579](https://github.com/Rushil13579)
