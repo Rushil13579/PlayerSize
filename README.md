@@ -13,5 +13,17 @@ Commands | Aliases | Description
 /playersize small | [/ps small] | Set the size of all players to small
 /playersize hide | [/ps hide] | Set the size of all players to hidden
 
+## Why this plugin?
+
+- At first this plugin might seem similar to other plugins out there which change the sizes of players, but its actually vastly different!
+
+- If there are any players who are obstructing your view or if the hub or parkour is just too crowded, you can use this plugin to easily solve these issues. You can set the size of all online players to small or you can just completely hide them away! This would just change the player sizes for you and only you, other players wont be affected by this at all!
+
+- You can even choose if you want the commands of this plugins to require permissions!
+
+- You can blacklist the commands of this plugin but adding the world name in the blacklisted-worlds list!
+
+**Thanks & Enjoy**
+
 ## Credits
 - [Rushil13579](https://github.com/Rushil13579)
