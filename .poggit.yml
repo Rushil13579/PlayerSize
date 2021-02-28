@@ -5,4 +5,7 @@ branches:
 projects:
   PlayerSize:
     path: ""
+    libs:
+    - src: jojoe/FormAPI/libFormAPI
+      version: ^1.3
 ...
