@@ -3,7 +3,6 @@ main: Rushil13579\PlayerSize\Main
 author: Rushil13579
 api: 3.0.0
 version: 1.0.0
-softdepend: [FormAPI]
 mcpe-protocol: [422]
 
 commands:
