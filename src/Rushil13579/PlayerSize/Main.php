@@ -16,15 +16,12 @@ use pocketmine\network\mcpe\protocol\SetActorDataPacket;
 
 use pocketmine\utils\{Config, TextFormat as C};
 
-use jojoe77777\FormAPI\CustomForm;
-
 class Main extends PluginBase {
 
   public $cfg;
   public $msg;
 
   public $size = [];
-  public $formapi = null;
 
   public function onEnable(){
     $this->saveResource('config.yml');
@@ -40,10 +37,7 @@ class Main extends PluginBase {
     if($this->getServer()->getPluginManager()->getPlugin('FormAPI') === null){
       if($this->cfg->get('playersize-formapi-support') == true){
         $this->getLogger()->warning(C::colorize("&cFormAPI not found! Please disable formapi-support or install FormAPI"));
-      }
-    } else {
-      if($this->cfg->get('playersize-formapi-support') == true){
-        $this->formapi = 'on';
+        $this->getServer()->getPluginManager()->disablePlugin($this);
       }
     }
   }
@@ -73,7 +67,7 @@ class Main extends PluginBase {
       }
 
       if(!isset($args[0])){
-        if($this->formapi == 'on'){
+        if($this->cfg->get('playersize-formapi-support') == true){
           $this->playersizeForm($sender);
           return false;
         }
