@@ -16,6 +16,8 @@ use pocketmine\network\mcpe\protocol\SetActorDataPacket;
 
 use pocketmine\utils\{Config, TextFormat as C};
 
+use jojoe77777\FormAPI\CustomForm;
+
 class Main extends PluginBase {
 
   public $cfg;
