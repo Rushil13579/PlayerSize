@@ -24,6 +24,7 @@ class Main extends PluginBase {
   public $msg;
 
   public $size = [];
+  public $formapi = null;
 
   public function onEnable(){
     $this->saveResource('config.yml');
@@ -39,7 +40,10 @@ class Main extends PluginBase {
     if($this->getServer()->getPluginManager()->getPlugin('FormAPI') === null){
       if($this->cfg->get('playersize-formapi-support') == true){
         $this->getLogger()->warning(C::colorize("&cFormAPI not found! Please disable formapi-support or install FormAPI"));
-        $this->getServer()->getPluginManager()->disablePlugin($this);
+      }
+    } else {
+      if($this->cfg->get('playersize-formapi-support') == true){
+        $this->formapi = 'on';
       }
     }
   }
@@ -69,7 +73,7 @@ class Main extends PluginBase {
       }
 
       if(!isset($args[0])){
-        if($this->cfg->get('playersize-formapi-support') == true){
+        if($this->formapi == 'on'){
           $this->playersizeForm($sender);
           return false;
         }

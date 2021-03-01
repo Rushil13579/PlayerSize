@@ -3,7 +3,7 @@
 # Use '&' for color
 
 # Set this to true to enable FormAPI support, and false to disable. [Set to true only if FormAPI is installed]
-playersize-formapi-support: false
+playersize-formapi-support: true
 
 # Set this to true to enable a permission for playersize commands
 playersize-permission-enabled: true
